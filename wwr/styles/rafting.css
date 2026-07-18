@@ -90,7 +90,7 @@ h1 {
     float: right;
     width: 125px;
     margin-left: 16px;
-    border: 2px solid #fff;
+    border: 2px solid var(--accent2-color);
 }
 
 /*The logos were way to big and I could not easily find out how to shrink them everything I tried didnt work*/
