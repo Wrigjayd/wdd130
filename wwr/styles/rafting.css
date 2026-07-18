@@ -74,14 +74,14 @@ h1 {
     color: #fff;
 }
 
-article {
+.hero article {
     position: absolute;
     top: 120px;
     left: 0;
     right: 0;
     margin: 0;
     padding: 24px;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     display: flow-root;
 
 }
