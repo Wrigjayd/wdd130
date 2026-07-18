@@ -1,0 +1,111 @@
+:root {
+    --primary-color: #0F2A3F;
+    --secondary-color: #F4F8FA;
+    --accent1-color: #FF5A1F;
+    --accent2-color: #00A896;
+    --heading-font: 'Impact', 'Arial Black', -apple-system, sans-serif;
+    --body-font: 'Helvetica Neue', Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--accent1-color);
+}
+
+header,
+main,
+footer {
+    width: 840px;
+    margin: 0 auto;
+}
+
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+nav,
+p,
+section,
+article {
+    margin: 16px;
+    padding: 8px;
+}
+
+.socialmedia a {
+    text-decoration: none;
+    width: 32px;
+    height: auto;
+}
+
+.socialmedia ul {
+    list-style-type: none;
+    display: flex;
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    opacity: 0.7;
+    background-color: var(--accent1-color);
+    color: #fff;
+}
+
+article {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 24px;
+    background-color: var(--primary-color);
+    display: flow-root;
+
+}
+
+.hero article img {
+    float: right;
+    width: 125px;
+    margin-left: 16px;
+    border: 2px solid #fff;
+}
+
+/*The logos were way to big and I could not easily find out how to shrink them everything I tried didnt work*/
+/*So I went to the internet and asked ai ways to fix it as well. */
+footer .socialmedia ul li a img {
+    width: 32px !important;
+    height: 32px !important;
+    object-fit: contain;
+}
+
+footer .socialmedia ul {
+    list-style-type: none !important;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 16px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
