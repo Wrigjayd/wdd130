@@ -15,9 +15,10 @@
 
 body {
     font-family: var(--body-font);
-    color: var(--accent1-color);
+    color: var(--primary-color);
 }
 
+/*Layout containers*/
 header,
 main,
 footer {
@@ -31,28 +32,41 @@ h2 {
     color: var(--primary-color);
 }
 
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
+/*Header Content*/
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 1rem 0;
 }
 
-.socialmedia a {
-    text-decoration: none;
-    width: 32px;
-    height: auto;
+header img {
+    max-height: 80px;
+    width: auto;
 }
 
-.socialmedia ul {
-    list-style-type: none;
+/*Header Navigation*/
+header nav ul {
     display: flex;
-    gap: 16px;
-    padding: 0;
+    justify-content: flex-end;
+    list-style: none;
+    gap: 20px;
     margin: 0;
+    padding: 0;
 }
 
+header nav a:hover {
+    color: var(--accent1-color);
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 18px 12px;
+}
+
+/*Hero section*/
 .hero {
     position: relative;
 }
@@ -70,7 +84,7 @@ h1 {
     padding: 16px;
     text-align: center;
     opacity: 0.7;
-    background-color: var(--accent1-color);
+    background-color: var(--primary-color);
     color: #fff;
 }
 
@@ -93,19 +107,88 @@ h1 {
     border: 2px solid var(--accent2-color);
 }
 
-/*The logos were way to big and I could not easily find out how to shrink them everything I tried didnt work*/
-/*So I went to the internet and asked ai ways to fix it as well. */
-footer .socialmedia ul li a img {
-    width: 32px !important;
-    height: 32px !important;
-    object-fit: contain;
+.hero article p {
+    color: var(--primary-color);
+}
+
+/*History Section*/
+.history {
+    clear: both;
+    margin: 2rem 0;
+    padding: 0 8px;
+}
+
+.history h2 {
+    margin-bottom: 0.5rem;
+}
+
+.history p {
+    line-height: 1.6;
+}
+
+/*Adventure Section*/
+.adventures {
+    margin: 2rem 0;
+    padding: 0 8px;
+}
+
+.adventures h2 {
+    margin-bottom: 1rem;
+}
+
+.adventures-containter {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.adventures-containter figure {
+    flex: 1;
+    text-align: center;
+}
+
+.adventures-containter img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid var(--accent1-color);
+}
+
+.adventures-containter figcaption {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 6px;
+}
+
+/*Footer Section*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 8px;
+    border-top: 2px solid var(--secondary-color);
+    margin-top: 2rem;
+}
+
+footer p {
+    color: var(--primary-color);
 }
 
 footer .socialmedia ul {
-    list-style-type: none !important;
-    display: flex !important;
-    flex-direction: row !important;
-    gap: 16px !important;
-    padding: 0 !important;
-    margin: 0 !important;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    display: flex;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+footer .socialmedia img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    display: block;
 }
